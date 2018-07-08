@@ -17,6 +17,11 @@ ActiveRecord::Schema.define(version: 2018_07_08_151014) do
   enable_extension "plpgsql"
 
   create_table "users", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.string "confirmation_token"
+    t.datetime "confirmed_at"
+    t.string "email", null: false
+    t.string "first_name", default: ""
+    t.string "last_name", default: ""
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
