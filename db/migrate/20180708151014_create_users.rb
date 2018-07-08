@@ -8,10 +8,13 @@ class CreateUsers < ActiveRecord::Migration[5.2]
       t.string    :first_name,              default: ''
       t.string    :last_name,               default: ''
 
+      t.string    :unsubscribe_token
+
       t.timestamps                          null: false
     end
 
     add_index :users, :confirmation_token,  unique: true
     add_index :users, :email,               unique: true
+    add_index :users, :unsubscribe_token,    unique: true
   end
 end
