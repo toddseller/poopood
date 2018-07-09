@@ -4,8 +4,6 @@ class User < ApplicationRecord
   has_secure_token :confirmation_token
   has_secure_token :unsubscribe_token
 
-  private
-
   def validate_email
     self.confirmed = true
     self.confirmation_token = nil
