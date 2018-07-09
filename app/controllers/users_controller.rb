@@ -17,6 +17,7 @@ class UsersController < ApplicationController
 
     if user
       user.validate_email
+      user.save
     end
   end
 end
