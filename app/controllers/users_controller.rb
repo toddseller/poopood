@@ -7,6 +7,8 @@ class UsersController < ApplicationController
       respond_to do |format|
         if @user.save
           UserMailer.email_confirmation(@user).delivery_now
+        end
+      end
     end
   end
 end
