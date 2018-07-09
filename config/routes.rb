@@ -5,8 +5,8 @@ Rails.application.routes.draw do
 
   resources :users do
     member do
-      get '/confirmation_email'
-      get '/unsubscribe_email'
+      get :confirmation_email
+      get :unsubscribe_email
     end
   end
 
