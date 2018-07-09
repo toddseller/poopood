@@ -13,7 +13,10 @@ class UsersController < ApplicationController
   end
 
   def confirmation_email
-    p params[:confirmation_token]
-    p 'FUCK YEAH!'
+    user = User.find_by_confirmation_token(params[:confirmation_token])
+
+    if user
+      user.validate_email
+    end
   end
 end
