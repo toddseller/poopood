@@ -265,7 +265,7 @@
                                              <table role="presentation" align="center" cellspacing="0" cellpadding="0" border="0" class="center-on-narrow" style="text-align: center;">
                                                  <tr>
                                                      <td style="border-radius: 5px; background: #ba9077; text-align: center;" class="button-td">
-                                                       <%= link_to confirm_email_url(@user.confirmation_token), style: 'background: #ba9077; border: 15px solid #ba9077; font-family: 'Montserrat', sans-serif; font-size: 14px; line-height: 1.1; text-align: center; text-decoration: none; display: block; border-radius: 5px; font-weight: bold;', class: 'button-a' do %>
+                                                       <%= link_to confirmation_email_url(@user.confirmation_token, host: 'localhost:3000'), style: "background: #ba9077; border: 15px solid #ba9077; font-family: 'Montserrat', sans-serif; font-size: 14px; line-height: 1.1; text-align: center; text-decoration: none; display: block; border-radius: 5px; font-weight: bold;", class: "button-a" do %>
                                                          <span style="color:#ffffff;" class="button-link">CONFIRM EMAIL</span>
                                                        <% end %>
                                                      </td>
@@ -345,8 +345,8 @@
                         <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
                             <tr>
                                 <td style="padding: 40px 40px 10px 40px; font-family: sans-serif; font-size: 12px; line-height: 18px; color: #ffffff; text-align: center; font-weight:normal;">
-                                    <p style="margin: 0;">This email was sent to <%= #{@user.email} %> because someone recently signed up for our mailing list. If you feel that you have received this email by mistake,
-                                    or would no longer like to receive updates, you can <%= link_to "Unsubscribe", unsubsribe_url(@user.unsubscribe_token) %> here.</p>
+                                    <p style="margin: 0;">This email was sent to <%= @user.email %> because someone recently signed up for our mailing list. If you feel that you have received this email by mistake,
+                                    or would no longer like to receive updates, you can <%= link_to "Unsubscribe", unsubscribe_email_url(@user.unsubscribe_token, host: 'localhost:3000') %> here.</p>
                                 </td>
                             </tr>
                             <tr>

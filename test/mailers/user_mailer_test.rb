@@ -1,7 +1,9 @@
 require 'test_helper'
 
 class UserMailerTest < ActionMailer::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  def email_confirmation
+    @user = User.find_by_email('tseller@onyxwear.com')
+
+    UserMailer.email_confirmation(@user)
+  end
 end
