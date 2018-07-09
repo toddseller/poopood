@@ -11,4 +11,9 @@ class UsersController < ApplicationController
       end
     end
   end
+
+  def confirmation_email
+    p params[:confirmation_token]
+    p 'FUCK YEAH!'
+  end
 end
