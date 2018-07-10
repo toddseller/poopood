@@ -13,7 +13,7 @@ class UsersController < ApplicationController
   end
 
   def confirmation_email
-    user = User.find_by_confirmation_token(params[:confirmation_token])
+    user = User.find_by_confirmation_token(params[:token])
 
     if user
       user.validate_email
@@ -24,7 +24,7 @@ class UsersController < ApplicationController
   end
 
   def unsubscribe
-    user = User.find_by_unsubscribe_token(params[:unsubscribe_token])
+    user = User.find_by_unsubscribe_token(params[:token])
 
     if user
       user.destroy
