@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get 'welcome/index'
 
   get '/confirmation_email', to: "users#confirmation_email", as: 'confirmation_email'
-  get '/unsubscribe_email', to: "users#unsubscribe_email", as: 'unsubscribe_email'
+  get '/unsubscribe', to: "users#unsubscribe", as: 'unsubscribe'
 
   if Rails.env.development?
     mount LetterOpenerWeb::Engine, at: "/letter_opener"

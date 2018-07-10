@@ -18,6 +18,18 @@ class UsersController < ApplicationController
     if user
       user.validate_email
       user.save
+      p '*' * 80
+      p 'User confirmed'
+    end
+  end
+
+  def unsubscribe
+    user = User.find_by_unsubscribe_token(params[:unsubscribe_token])
+
+    if user
+      user.destroy
+      p '*' * 80
+      p 'User deleted'
     end
   end
 end
