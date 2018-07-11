@@ -1,11 +1,9 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
 <div class="container">
   <div class="row">
-    <%= form_with url: create_url, class: 'form-inline' do |form| %>
-
-          <%= form.text_field :email, id: :email, class: 'form-control mb-2' %>
-          <button type="submit" class="btn btn-primary mb-2">Submit</button>
-    <% end %>
+    <div class="col-12">
+      <h1>Welcome#index</h1>
+      <p>Find me in app/views/welcome/index.html.erb</p>
+      <%= render 'partials/email_form' %>      
+    </div>
   </div>
 </div>

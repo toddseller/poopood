@@ -1,0 +1,10 @@
+.btn-primary
+{
+  border-color: $sepia;
+  background-color: $sepia;
+  &:hover
+  {
+    border-color: $green;
+    background-color: $green;
+  }
+}
