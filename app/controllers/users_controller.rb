@@ -1,15 +1,16 @@
 class UsersController < ApplicationController
 
   def create
-    @user = User.new(params[:user])
+    params[:email]
+    @user = User.new(email: params[:email])
 
-    if request.xhr?
-      respond_to do |format|
+    # if request.xhr?
+      # respond_to do |format|
         if @user.save
-          UserMailer.email_confirmation(@user).delivery_now
+          UserMailer.email_confirmation(@user).deliver_now
         end
-      end
-    end
+      # end
+    # end
   end
 
   def confirmation_email

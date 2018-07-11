@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
   get 'welcome/index'
 
+  post 'users/create', to: 'users#create', as: 'create'
+
   get '/confirmation_email', to: "users#confirmation_email", as: 'confirmation_email'
   get '/unsubscribe', to: "users#unsubscribe", as: 'unsubscribe'
 

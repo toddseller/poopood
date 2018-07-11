@@ -349,7 +349,7 @@
                         <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
                             <tr>
                                 <td style="padding: 40px 40px 10px 40px; font-family: sans-serif; font-size: 12px; line-height: 18px; color: #ffffff; text-align: center; font-weight:normal;">
-                                    <p style="margin: 0;">This email was sent to <%= @user.email %> because someone recently signed up for our mailing list. If you feel that you have received this email by mistake,
+                                    <p style="margin: 0;">This email was sent to <%= @user.email %> because someone recently signed up for our mailing list. We value your privacy and never sell your information to 3rd party marketers. If you feel that you have received this email by mistake,
                                     or would no longer like to receive updates, you can <%= link_to "Unsubscribe", unsubscribe_url(token: @user.unsubscribe_token) %> here.</p>
                                 </td>
                             </tr>
