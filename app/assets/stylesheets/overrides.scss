@@ -1,10 +1,17 @@
 .btn-primary
 {
-  border-color: $sepia;
-  background-color: $sepia;
+  border-color: $blue;
+  background-color: $blue;
+  color: $green;
   &:hover
   {
     border-color: $green;
     background-color: $green;
+    color: $blue;
   }
+}
+
+.input-group-lg
+{
+  height: 4em;
 }
